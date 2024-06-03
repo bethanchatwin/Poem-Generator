@@ -8,9 +8,11 @@ function showAnswer(response) {
 }
 function displayPoem(event) {
   event.preventDefault();
+  let instructionsInput = document.querySelector("#user-instructions");
   let apiKey = "0083118ae860436btf146b9cbfb3oc7f";
-  let context = "you are a poetic romantic. please keep our response short";
-  let prompt = "read me a poem";
+  let context =
+    "you are a poetic romantic. please keep your response fairly short";
+  let prompt = `User instructions: Generate a love poem about ${instructionsInput.value}`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
   let poemElement = document.querySelector("#poem");
   poemElement.innerHTML = "Generating a poem for you ... please wait.";
