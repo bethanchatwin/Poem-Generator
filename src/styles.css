@@ -24,15 +24,23 @@ h1 {
   color: #141010;
 }
 
-form {
-  padding: 30px;
+.form-container {
   background-color: none;
-  box-shadow: 0px 20px 60px #141010;
   border-radius: 10px;
-  display: flex;
-  margin-bottom: 30px;
-  border-radius: 10px;
+  margin-bottom: 30x;
   border: 2px solid #141010;
+  box-shadow: 0px 20px 60px #141010;
+  padding: 15px 20px;
+}
+form {
+  display: flex;
+}
+.hint {
+  line-height: 1.5;
+  margin-top: 5px;
+  margin-left: 20px;
+  opacity: 0.3;
+  font-size: 14px;
 }
 
 .instructions {
@@ -47,7 +55,6 @@ form {
 }
 
 input::placeholder {
-  font-weight: bold;
   opacity: 0.3;
   color: #141010;
 }
@@ -75,9 +82,25 @@ input::placeholder {
   border: 2px solid #141010;
   border-radius: 10px;
 }
+.hidden {
+  display: none;
+}
 
 footer {
   text-align: center;
   font-size: 15px;
   margin-top: 30px;
+}
+.heart {
+  animation: blink-animation 0.1ms steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
