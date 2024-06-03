@@ -3,7 +3,7 @@ function displayPoem(response) {
     strings: response.data.answer,
     autoStart: true,
     cursor: null,
-    delay: 20,
+    delay: 80,
   });
 }
 function generatePoem(event) {
@@ -18,7 +18,7 @@ function generatePoem(event) {
 
   let poemElement = document.querySelector("#poem");
   poemElement.classList.remove("hidden");
-  poemElement.innerHTML = `<div class="generating">Generating a love poem about ${instructionsInput.value} <div class="heart">♥</div>`;
+  poemElement.innerHTML = `<div class="generating">Generating a love poem about ${instructionsInput.value} <div class="heart">🖤</div>`;
 
   axios.get(apiUrl).then(displayPoem);
 }

@@ -92,7 +92,7 @@ footer {
   margin-top: 30px;
 }
 .heart {
-  animation: blink-animation 0.1ms steps(5, start) infinite;
+  animation: blink-animation 1s steps(5, start) infinite;
 }
 @keyframes blink-animation {
   to {
